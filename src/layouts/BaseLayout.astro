@@ -2,37 +2,58 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import {
+  getLangFromUrl,
+  getRouteSlug,
+  useTranslations,
+  htmlLang,
+  ogLocale,
+  localizedPath,
+  type Lang,
+} from "../i18n/utils";
 
 interface Props {
   title: string;
   description?: string;
+  lang?: Lang;
 }
+
+const urlLang = getLangFromUrl(Astro.url);
+const lang = Astro.props.lang ?? urlLang;
+const t = useTranslations(lang);
 
 const {
   title,
-  description = "Kevin and Joyce are getting married on January 2, 2027 at the Mandarin Oriental, Taipei.",
+  description = t("meta.defaultDescription"),
 } = Astro.props;
 
-const fullTitle = `${title} · Kevin & Joyce`;
+const fullTitle = `${title} · ${t("meta.siteName")}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const slug = getRouteSlug(Astro.url.pathname);
+const enHref = new URL(localizedPath("en", slug), Astro.site).href;
+const zhHref = new URL(localizedPath("zh", slug), Astro.site).href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang(lang)}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="zh-Hant" href={zhHref} />
+    <link rel="alternate" hreflang="x-default" href={enHref} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Kevin & Joyce" />
+    <meta property="og:site_name" content={t("meta.siteName")} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={ogLocale(lang)} />
+    <meta property="og:locale:alternate" content={lang === "zh" ? "en_US" : "zh_TW"} />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={fullTitle} />
@@ -48,11 +69,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{fullTitle}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <Header />
+    <a class="skip-link" href="#main">{t("a11y.skip")}</a>
+    <Header lang={lang} />
     <main id="main">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

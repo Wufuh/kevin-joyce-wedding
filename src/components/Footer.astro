@@ -1,11 +1,48 @@
 ---
+import {
+  useTranslations,
+  localizedPath,
+  getRouteSlug,
+  type Lang,
+} from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 const year = new Date().getFullYear();
+const slug = getRouteSlug(Astro.url.pathname);
 ---
 
 <footer class="site-footer">
   <div class="container">
     <p class="names">Kevin &amp; Joyce</p>
-    <p>January 2, 2027 · Mandarin Oriental, Taipei</p>
+    <p>{t("footer.dateVenue")}</p>
+    <div class="lang-toggle footer-lang" role="group" aria-label={t("a11y.langSwitch")}>
+      <a
+        class:list={["lang-option", { active: lang === "en" }]}
+        href={localizedPath("en", slug)}
+        lang="en"
+        hreflang="en"
+        data-lang-switch="en"
+        aria-current={lang === "en" ? "true" : undefined}
+      >
+        EN
+      </a>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <a
+        class:list={["lang-option", { active: lang === "zh" }]}
+        href={localizedPath("zh", slug)}
+        lang="zh-Hant"
+        hreflang="zh-Hant"
+        data-lang-switch="zh"
+        aria-current={lang === "zh" ? "true" : undefined}
+      >
+        中文
+      </a>
+    </div>
     <p>&copy; {year} kevinandjoyce.com</p>
   </div>
 </footer>

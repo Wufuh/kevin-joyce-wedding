@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { useTranslations } from "../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../i18n/utils";
 
-const lang = "en" as const;
+const lang = "zh" as const;
 const t = useTranslations(lang);
 
 const hotelQuery = encodeURIComponent(
@@ -32,7 +32,7 @@ const maps = [
 
 function directionsEmbed(origin: string) {
   const saddr = encodeURIComponent(origin);
-  return `https://maps.google.com/maps?saddr=${saddr}&daddr=${hotelQuery}&hl=en&output=embed`;
+  return `https://maps.google.com/maps?saddr=${saddr}&daddr=${hotelQuery}&hl=zh-TW&output=embed`;
 }
 
 function directionsLink(origin: string) {

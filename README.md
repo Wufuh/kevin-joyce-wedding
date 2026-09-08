@@ -43,17 +43,10 @@ Fields collected: name(s), email, attending (yes/no/maybe), guest count, dietary
 4. Add PUBLIC_FORMSPREE_ID in environment variables.
 5. Deploy. Optionally attach the kevinandjoyce.com domain.
 
-## Pages
+## Languages
 
-- / - Home
-- /our-story - Our Story
-- /details - Details
-- /travel - Travel & Stay
-- /rsvp - RSVP
-- /registry - Registry
-- /faq - FAQ
+- English: `/`, `/details`, `/travel`, `/rsvp`, `/our-story`, `/registry`, `/faq`
+- Traditional Chinese: `/zh/`, `/zh/details`, `/zh/travel`, `/zh/rsvp`, `/zh/our-story`, `/zh/registry`, `/zh/faq`
+- Toggle EN | zh in header/footer; strings in `src/i18n/ui.ts`
+- Astro i18n locales `en` + `zh`, `prefixDefaultLocale: false`
 
-## Notes
-
-- Photos can replace the gradient/typography placeholders later.
-- Reception only (no ceremony). Cocktail hour at 5:00 PM; dinner time TBD. Dress code: Cocktail.

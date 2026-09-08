@@ -1,12 +1,30 @@
 ---
+import {
+  useTranslations,
+  localizedPath,
+  getRouteSlug,
+  type Lang,
+} from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const otherLang: Lang = lang === "en" ? "zh" : "en";
+const slug = getRouteSlug(Astro.url.pathname);
+const otherHref = localizedPath(otherLang, slug);
+const homeHref = localizedPath(lang, "");
+
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/our-story", label: "Our Story" },
-  { href: "/details", label: "Details" },
-  { href: "/travel", label: "Travel & Stay" },
-  { href: "/rsvp", label: "RSVP" },
-  { href: "/registry", label: "Registry" },
-  { href: "/faq", label: "FAQ" },
+  { slug: "" as const, label: t("nav.home") },
+  { slug: "our-story" as const, label: t("nav.ourStory") },
+  { slug: "details" as const, label: t("nav.details") },
+  { slug: "travel" as const, label: t("nav.travel") },
+  { slug: "rsvp" as const, label: t("nav.rsvp") },
+  { slug: "registry" as const, label: t("nav.registry") },
+  { slug: "faq" as const, label: t("nav.faq") },
 ];
 
 const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -14,46 +32,99 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 <header class="site-header">
   <div class="container nav">
-    <a class="logo" href="/">Kevin &amp; Joyce</a>
-    <nav aria-label="Primary">
+    <a class="logo" href={homeHref}>Kevin &amp; Joyce</a>
+    <nav aria-label={t("a11y.primaryNav")}>
       <ul class="nav-links">
-        {links.map((link) => (
-          <li>
-            <a
-              href={link.href}
-              aria-current={pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href)) ? "page" : undefined}
-            >
-              {link.label}
-            </a>
-          </li>
-        ))}
+        {
+          links.map((link) => {
+            const href = localizedPath(lang, link.slug);
+            const normalized = href.replace(/\/$/, "") || "/";
+            const current =
+              pathname === normalized ||
+              (link.slug !== "" && pathname.endsWith(`/${link.slug}`));
+            return (
+              <li>
+                <a href={href} aria-current={current ? "page" : undefined}>
+                  {link.label}
+                </a>
+              </li>
+            );
+          })
+        }
       </ul>
     </nav>
-    <button
-      class="nav-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="mobile-nav"
-      data-nav-toggle
-    >
-      <span class="sr-only">Menu</span>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-      </svg>
-    </button>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label={t("a11y.langSwitch")}>
+        <a
+          class:list={["lang-option", { active: lang === "en" }]}
+          href={localizedPath("en", slug)}
+          lang="en"
+          hreflang="en"
+          data-lang-switch="en"
+          aria-current={lang === "en" ? "true" : undefined}
+        >
+          EN
+        </a>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <a
+          class:list={["lang-option", { active: lang === "zh" }]}
+          href={localizedPath("zh", slug)}
+          lang="zh-Hant"
+          hreflang="zh-Hant"
+          data-lang-switch="zh"
+          aria-current={lang === "zh" ? "true" : undefined}
+        >
+          中文
+        </a>
+      </div>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        data-nav-toggle
+      >
+        <span class="sr-only">{t("a11y.menu")}</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
   </div>
   <div class="container nav-panel" id="mobile-nav" data-nav-panel hidden>
     <ul>
-      {links.map((link) => (
-        <li>
-          <a href={link.href}>{link.label}</a>
-        </li>
-      ))}
+      {
+        links.map((link) => (
+          <li>
+            <a href={localizedPath(lang, link.slug)}>{link.label}</a>
+          </li>
+        ))
+      }
+      <li class="nav-panel-lang">
+        <a href={otherHref} data-lang-switch={otherLang}>
+          {otherLang === "zh" ? "中文" : "EN"}
+        </a>
+      </li>
     </ul>
   </div>
 </header>
 
 <script>
+  const STORAGE_KEY = "kj-lang";
+
+  document.querySelectorAll("[data-lang-switch]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const next = el.getAttribute("data-lang-switch");
+      if (next === "en" || next === "zh") {
+        try {
+          localStorage.setItem(STORAGE_KEY, next);
+        } catch {
+          /* ignore */
+        }
+      }
+    });
+  });
+
   const toggle = document.querySelector("[data-nav-toggle]");
   const panel = document.querySelector("[data-nav-panel]");
   if (toggle && panel) {
