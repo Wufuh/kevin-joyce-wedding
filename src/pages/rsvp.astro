@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID || 'meaqpryv';
 const formAction = formspreeId
   ? `https://formspree.io/f/${formspreeId}`
   : undefined;
