@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Home"
+  description="Kevin and Joyce invite you to celebrate their wedding in January 2027 at the Mandarin Oriental, Taipei."
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">We're getting married</p>
+        <h1>Kevin &amp; Joyce</h1>
+        <p class="hero-meta">
+          <strong>January 2027</strong><br />
+          Mandarin Oriental, Taipei
+        </p>
+        <p class="lede">
+          A warm celebration with the people we love most. We can't wait to share
+          this day with you in Taipei.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/rsvp">RSVP</a>
+          <a class="btn btn-secondary" href="/details">Wedding details</a>
+        </div>
+      </div>
+      <div class="placeholder-hero" role="img" aria-label="Decorative monogram placeholder">
+        K &amp; J
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container grid-2">
+      <article class="card">
+        <p class="eyebrow">Our story</p>
+        <h2>How we got here</h2>
+        <p>
+          A few favorite chapters from our journey together — still being written,
+          and editable whenever we add more.
+        </p>
+        <a href="/our-story">Read our story</a>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Visiting Taipei</p>
+        <h2>Travel &amp; stay</h2>
+        <p>
+          Notes on getting to Taipei and staying near the Mandarin Oriental so
+          the weekend feels easy.
+        </p>
+        <a href="/travel">Plan your trip</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

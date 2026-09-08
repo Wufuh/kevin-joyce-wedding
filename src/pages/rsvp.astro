@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
+const formAction = formspreeId
+  ? `https://formspree.io/f/${formspreeId}`
+  : undefined;
+---
+
+<BaseLayout
+  title="RSVP"
+  description="RSVP for Kevin and Joyce's wedding in January 2027 at the Mandarin Oriental, Taipei."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Kindly reply</p>
+      <h1>RSVP</h1>
+      <p class="lede">
+        Let us know if you can celebrate with us. One response per household is perfect.
+      </p>
+
+      {formAction ? (
+        <form class="form" method="POST" action={formAction}>
+          <input type="hidden" name="_subject" value="Wedding RSVP — Kevin & Joyce" />
+          <label>
+            Name(s)
+            <span class="hint">Include everyone in your party</span>
+            <input type="text" name="names" required autocomplete="name" placeholder="Alex Chen, Jordan Lee" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Will you be attending?
+            <select name="attending" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="yes">Yes, gladly</option>
+              <option value="no">Sadly no</option>
+              <option value="maybe">Maybe / not sure yet</option>
+            </select>
+          </label>
+
+          <label>
+            Guest count
+            <span class="hint">Total number of people in your party, including you</span>
+            <input type="number" name="guest_count" min="0" max="20" step="1" required placeholder="2" />
+          </label>
+
+          <label>
+            Dietary notes
+            <span class="hint">Allergies, vegetarian, etc.</span>
+            <textarea name="dietary" placeholder="Optional"></textarea>
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" placeholder="A note for Kevin & Joyce (optional)"></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Send RSVP</button>
+          <p class="form-note">We'll confirm once we receive your response.</p>
+        </form>
+      ) : (
+        <div class="card" style="max-width: 36rem;">
+          <h2>Form not configured yet</h2>
+          <p>
+            Set <code>PUBLIC_FORMSPREE_ID</code> in your environment (see README)
+            to enable the on-site RSVP form. Create a free form at
+            <a href="https://formspree.io" rel="noopener noreferrer">formspree.io</a>,
+            then restart the dev server or rebuild.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const faqs = [
+  {
+    q: "When is the wedding?",
+    a: "January 2027 at the Mandarin Oriental, Taipei. The exact date and times will be shared on the Details page and with invitations.",
+  },
+  {
+    q: "Where should we stay?",
+    a: "Staying at or near the Mandarin Oriental, Taipei is most convenient. See Travel & Stay for neighborhood guidance.",
+  },
+  {
+    q: "How do I RSVP?",
+    a: "Use the on-site form on the RSVP page. One response per household is ideal.",
+  },
+  {
+    q: "Is there a dress code?",
+    a: "Still TBD — we'll post guidance on the Details page once it's finalized.",
+  },
+  {
+    q: "Can I bring a plus-one?",
+    a: "Please follow what your invitation indicates. If you're unsure, note it in your RSVP message and we'll follow up.",
+  },
+];
+---
+
+<BaseLayout
+  title="FAQ"
+  description="Frequently asked questions about Kevin and Joyce's wedding in Taipei."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Questions</p>
+      <h1>FAQ</h1>
+      <p class="lede">Quick answers — we'll expand this list as plans settle.</p>
+      <div style="margin-top: 1.5rem; display: grid; gap: 1rem; max-width: 42rem;">
+        {faqs.map((item) => (
+          <article class="card">
+            <h2 style="font-size: 1.35rem;">{item.q}</h2>
+            <p>{item.a}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
