@@ -1,18 +1,132 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const hotelAddress = "158 Dunhua North Road, Songshan District, Taipei";
+const hotelQuery = encodeURIComponent(
+  "Mandarin Oriental Taipei, 158 Dunhua North Road, Songshan District, Taipei",
+);
+
+const maps = [
+  {
+    id: "from-tpe",
+    title: "From Taiwan Taoyuan International Airport (TPE)",
+    originLabel: "Taiwan Taoyuan International Airport (TPE)",
+    tip: "Most international flights arrive here. By taxi or private transfer, plan roughly 40–60 minutes to the hotel, depending on traffic. The Airport MRT into Taipei is also reliable; from there, a short taxi or MRT connection reaches Songshan / Dunhua.",
+  },
+  {
+    id: "from-tsa",
+    title: "From Taipei Songshan Airport (TSA)",
+    originLabel: "Taipei Songshan Airport (TSA)",
+    tip: "Songshan is the closer city airport. A taxi to the Mandarin Oriental is typically about 15–25 minutes, traffic permitting — a convenient option for many regional flights.",
+  },
+  {
+    id: "from-main",
+    title: "From Taipei Main Station",
+    originLabel: "Taipei Main Station",
+    tip: "From Taipei Main Station, expect roughly 20–30 minutes by taxi, or a straightforward MRT ride plus a short walk or hop to Dunhua North Road. Exact timing varies with transfers and traffic.",
+  },
+] as const;
+
+function directionsEmbed(origin: string) {
+  const saddr = encodeURIComponent(origin);
+  const daddr = hotelQuery;
+  return `https://maps.google.com/maps?saddr=${saddr}&daddr=${daddr}&hl=en&output=embed`;
+}
+
+function directionsLink(origin: string) {
+  return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${hotelQuery}`;
+}
 ---
 
 <BaseLayout
   title="Travel & Stay"
-  description="Getting to Taipei and staying near the Mandarin Oriental for Kevin and Joyce's wedding."
+  description="Getting to Taipei, wedding room block notes, and directions to the Mandarin Oriental for Kevin and Joyce's January 2, 2027 reception."
 >
   <section class="section">
     <div class="container">
       <p class="eyebrow">Taipei</p>
       <h1>Travel &amp; stay</h1>
       <p class="lede">
-        Helpful notes for reaching Taipei and lodging near the Mandarin Oriental.
+        Warm welcomes and practical notes for reaching Taipei and settling near
+        the Mandarin Oriental for our January 2, 2027 reception.
       </p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="room-block">
+    <div class="container">
+      <article class="card room-block-card">
+        <p class="eyebrow">Wedding hotel</p>
+        <h2>Room block at Mandarin Oriental, Taipei</h2>
+        <p>
+          Our celebration is at the <strong>Mandarin Oriental, Taipei</strong>
+          — 158 Dunhua North Road, Songshan District. Guests who would like a
+          room in the wedding block are warmly invited to reach out.
+        </p>
+        <ul class="travel-list">
+          <li>
+            <strong>Deadline:</strong> please contact the couple by
+            <strong>October 31, 2026</strong> if you would like a room in the
+            block.
+          </li>
+          <li>
+            <strong>Rate:</strong> approximately <strong>40% off</strong> the
+            usual rate —
+            <em>approximate and pending final confirmation with the hotel</em>.
+          </li>
+        </ul>
+        <p class="form-note">
+          We are still finalizing block details with the hotel, so we are not
+          publishing a booking link or group code just yet. Thank you for your
+          patience.
+        </p>
+        <p class="soft-cta">
+          <strong>Contact the couple</strong> by October 31, 2026 if you would
+          like a room in the wedding block. We will share booking steps once the
+          hotel confirms the final details.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="getting-to-hotel">
+    <div class="container">
+      <p class="eyebrow">Directions</p>
+      <h2>Getting to the hotel</h2>
+      <p class="lede">
+        Maps from popular departure points to Mandarin Oriental, Taipei
+        ({hotelAddress}). Travel times below are approximate ballparks —
+        traffic and transfers can shift them.
+      </p>
+
+      <div class="map-stack">
+        {
+          maps.map((item) => (
+            <article class="card map-card" id={item.id}>
+              <h3>{item.title}</h3>
+              <div class="map-frame">
+                <iframe
+                  title={`Map: ${item.title} to Mandarin Oriental Taipei`}
+                  src={directionsEmbed(item.originLabel)}
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                />
+              </div>
+              <p class="map-tip">{item.tip}</p>
+              <p class="map-actions">
+                <a
+                  href={directionsLink(item.originLabel)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open directions in Google Maps
+                </a>
+              </p>
+            </article>
+          ))
+        }
+      </div>
     </div>
   </section>
 
@@ -23,22 +137,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p>
           Most international guests arrive at Taiwan Taoyuan International Airport
           (TPE). From there, the Airport MRT, taxis, and private transfers make it
-          straightforward to reach central Taipei.
+          straightforward to reach central Taipei and the hotel.
         </p>
         <p>
-          Songshan Airport (TSA) is closer to the venue for some regional flights.
-        </p>
-      </article>
-      <article class="card">
-        <h2>Staying near the venue</h2>
-        <p>
-          The wedding is at the <strong>Mandarin Oriental, Taipei</strong> in
-          Songshan District, along Dunhua North Road. Guests who prefer to stay
-          on-site can inquire directly with the hotel about availability.
-        </p>
-        <p>
-          The Dunhua / Nanjing area also has many nearby hotels within a short
-          taxi or MRT ride of the venue.
+          Taipei Songshan Airport (TSA) sits closer to the venue and can be a
+          convenient option for some regional flights.
         </p>
       </article>
       <article class="card">
@@ -46,15 +149,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p>
           Taipei's MRT is clean, frequent, and easy to navigate in English.
           Taxis and ride-hailing apps are widely available. The Mandarin Oriental
-          sits near major roads and MRT connections in eastern Taipei.
+          sits near major roads and MRT connections in eastern Taipei, along
+          Dunhua North Road.
         </p>
       </article>
       <article class="card">
         <h2>Neighborhood notes</h2>
         <p>
           Songshan and nearby Zhongshan / Dazhi offer restaurants, cafés, and
-          shopping within easy reach of the hotel. We'll add favorite spots and
-          any group-rate hotel notes here as they become available.
+          shopping within easy reach of the hotel. The Dunhua / Nanjing corridor
+          also has many lodging options a short taxi or MRT ride from the venue
+          if you prefer to stay elsewhere.
+        </p>
+      </article>
+      <article class="card">
+        <h2>Staying near the venue</h2>
+        <p>
+          Guests who prefer to stay on-site can join the wedding block at the
+          Mandarin Oriental (see above). Nearby hotels along Dunhua and Nanjing
+          are also within a short ride if the block is full or you would rather
+          book independently.
         </p>
       </article>
     </div>

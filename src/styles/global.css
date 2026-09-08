@@ -395,3 +395,72 @@ p { margin: 0 0 1rem; }
   white-space: nowrap;
   border: 0;
 }
+
+.travel-list {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--color-text);
+}
+
+.travel-list li {
+  margin-bottom: 0.55rem;
+}
+
+.soft-cta {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.15rem;
+  background: var(--color-accent-soft);
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+
+.room-block-card {
+  max-width: 46rem;
+}
+
+.map-stack {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.map-card h3 {
+  margin-bottom: 0.85rem;
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 280px;
+  border-radius: calc(var(--radius) - 0.15rem);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-accent-soft);
+}
+
+.map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-tip {
+  margin: 0.9rem 0 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+}
+
+.map-actions {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .map-frame {
+    aspect-ratio: 4 / 3;
+    max-height: 240px;
+  }
+}
