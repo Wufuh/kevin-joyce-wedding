@@ -1,6 +1,6 @@
 # Kevin & Joyce Wedding Site
 
-Warm, elegant static wedding website for Kevin & Joyce - January 2027 at the Mandarin Oriental, Taipei.
+Warm, elegant static wedding website for Kevin & Joyce — January 2, 2027 at the Mandarin Oriental, Taipei.
 
 Built with Astro + TypeScript. Domain for titles/meta: kevinandjoyce.com.
 
@@ -56,4 +56,4 @@ Fields collected: name(s), email, attending (yes/no/maybe), guest count, dietary
 ## Notes
 
 - Photos can replace the gradient/typography placeholders later.
-- Schedule and dress code are marked TBD on Details until confirmed.
+- Reception only (no ceremony). Cocktail hour at 5:00 PM; dinner time TBD. Dress code: Cocktail.
