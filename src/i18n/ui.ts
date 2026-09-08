@@ -284,7 +284,7 @@ export const ui = {
       '若希望加入住房優惠，請於 2026 年 10 月 31 日前聯繫新人。',
     'travel.roomRateLabel': '優惠：',
     'travel.roomRate':
-      '約為一般房價 4 折（約 40% off）——數字為暫估，最終以飯店確認為準。',
+      '約減 40%（約六折）——數字為暫估，最終以飯店確認為準。',
     'travel.roomPending':
       '我們仍在與飯店確認住房細節，因此尚未公布訂房連結或團體代碼。感謝您的耐心等候。',
     'travel.roomCtaStrong': '請聯繫新人',
