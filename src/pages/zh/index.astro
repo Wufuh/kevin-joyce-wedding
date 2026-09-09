@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import HomeHero from "../../components/HomeHero.astro";
 import { useTranslations, localizedPath } from "../../i18n/utils";
 
 const lang = "zh" as const;
@@ -11,26 +12,7 @@ const t = useTranslations(lang);
   title={t("home.metaTitle")}
   description={t("home.metaDescription")}
 >
-  <section class="hero">
-    <div class="container hero-inner">
-      <div>
-        <p class="eyebrow">{t("home.eyebrow")}</p>
-        <h1>Kevin &amp; Joyce</h1>
-        <p class="hero-meta">
-          <strong>{t("home.date")}</strong><br />
-          {t("home.venue")}
-        </p>
-        <p class="lede">{t("home.lede")}</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href={localizedPath(lang, "rsvp")}>{t("home.ctaRsvp")}</a>
-          <a class="btn btn-secondary" href={localizedPath(lang, "details")}>{t("home.ctaDetails")}</a>
-        </div>
-      </div>
-      <div class="placeholder-hero" role="img" aria-label="Decorative monogram placeholder">
-        K &amp; J
-      </div>
-    </div>
-  </section>
+  <HomeHero lang={lang} />
 
   <section class="section section-alt">
     <div class="container grid-2">

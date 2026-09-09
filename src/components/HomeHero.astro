@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero.jpg";
+import { useTranslations, localizedPath, type Lang } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">{t("home.eyebrow")}</p>
+      <h1>Kevin &amp; Joyce</h1>
+      <p class="hero-meta">
+        <strong>{t("home.date")}</strong><br />
+        {t("home.venue")}
+      </p>
+      <p class="lede">{t("home.lede")}</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href={localizedPath(lang, "rsvp")}>{t("home.ctaRsvp")}</a>
+        <a class="btn btn-secondary" href={localizedPath(lang, "details")}>{t("home.ctaDetails")}</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <Image
+        src={heroImage}
+        alt={t("home.heroAlt")}
+        widths={[640, 960, 1280, 1567]}
+        sizes="(min-width: 900px) 42vw, 92vw"
+        quality={85}
+        loading="eager"
+        fetchpriority="high"
+        class="hero-photo-img"
+      />
+    </figure>
+  </div>
+</section>

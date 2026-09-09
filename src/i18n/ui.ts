@@ -46,6 +46,7 @@ export const ui = {
       "A warm celebration with the people we love most. We can't wait to share this day with you in Taipei.",
     'home.ctaRsvp': 'RSVP',
     'home.ctaDetails': 'Wedding details',
+    'home.heroAlt': 'Kevin and Joyce, engagement portrait',
     'home.storyEyebrow': 'Our story',
     'home.storyTitle': 'How we got here',
     'home.storyBody':
@@ -237,6 +238,7 @@ export const ui = {
       '一場溫暖的宴客，與我們最親愛的人一起慶祝。期待在台北與您相聚。',
     'home.ctaRsvp': '回函 RSVP',
     'home.ctaDetails': '婚禮資訊',
+    'home.heroAlt': 'Kevin 與 Joyce 的訂婚照',
     'home.storyEyebrow': '我們的故事',
     'home.storyTitle': '一路走到這裡',
     'home.storyBody':
