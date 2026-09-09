@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import splashImage from "../assets/splash.jpg";
+import { useTranslations, type Lang } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div
+  class="splash-gate"
+  id="splash-gate"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="splash-title"
+>
+  <div class="splash-media" aria-hidden="true">
+    <Image
+      src={splashImage}
+      alt=""
+      widths={[480, 720, 1045, 1400]}
+      sizes="100vw"
+      quality={82}
+      loading="eager"
+      fetchpriority="high"
+      class="splash-photo"
+    />
+  </div>
+  <div class="splash-scrim" aria-hidden="true"></div>
+  <div class="splash-content">
+    <p class="splash-eyebrow">{t("splash.eyebrow")}</p>
+    <h1 id="splash-title" class="splash-names">{t("splash.names")}</h1>
+    <p class="splash-date">{t("splash.date")}</p>
+    <button type="button" class="btn btn-primary splash-enter" id="splash-enter">
+      {t("splash.enter")}
+    </button>
+  </div>
+  <span class="sr-only">{t("splash.alt")}</span>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = "kj-entered";
+    var gate = document.getElementById("splash-gate");
+    var enterBtn = document.getElementById("splash-enter");
+    if (!gate || !enterBtn) return;
+
+    function markEntered() {
+      try {
+        localStorage.setItem(KEY, "1");
+      } catch (e) {}
+      document.documentElement.classList.remove("kj-splash-pending");
+      document.documentElement.classList.add("kj-entered");
+    }
+
+    function dismiss() {
+      var reduce =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      markEntered();
+      if (reduce) {
+        gate.setAttribute("hidden", "");
+        gate.setAttribute("aria-hidden", "true");
+        return;
+      }
+      gate.classList.add("is-leaving");
+      var done = function () {
+        gate.setAttribute("hidden", "");
+        gate.setAttribute("aria-hidden", "true");
+        gate.classList.remove("is-leaving");
+      };
+      gate.addEventListener("transitionend", done, { once: true });
+      setTimeout(done, 500);
+    }
+
+    // Head script already set kj-entered or kj-splash-pending
+    if (document.documentElement.classList.contains("kj-entered")) {
+      gate.setAttribute("hidden", "");
+      gate.setAttribute("aria-hidden", "true");
+      return;
+    }
+
+    document.documentElement.classList.add("kj-splash-pending");
+    gate.removeAttribute("hidden");
+    gate.setAttribute("aria-hidden", "false");
+
+    setTimeout(function () {
+      try {
+        enterBtn.focus({ preventScroll: true });
+      } catch (e) {
+        enterBtn.focus();
+      }
+    }, 50);
+
+    enterBtn.addEventListener("click", dismiss);
+  })();
+</script>

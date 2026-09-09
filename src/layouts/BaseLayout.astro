@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SplashGate from "../components/SplashGate.astro";
 import "../styles/global.css";
 import {
   getLangFromUrl,
@@ -16,6 +17,8 @@ interface Props {
   title: string;
   description?: string;
   lang?: Lang;
+  /** Show full-screen intro splash on first visit (home only). */
+  splash?: boolean;
 }
 
 const urlLang = getLangFromUrl(Astro.url);
@@ -25,6 +28,7 @@ const t = useTranslations(lang);
 const {
   title,
   description = t("meta.defaultDescription"),
+  splash = false,
 } = Astro.props;
 
 const fullTitle = `${title} · ${t("meta.siteName")}`;
@@ -59,6 +63,21 @@ const zhHref = new URL(localizedPath("zh", slug), Astro.site).href;
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
 
+    {splash && (
+      <script is:inline>
+        (function () {
+          try {
+            if (localStorage.getItem("kj-entered") === "1") {
+              document.documentElement.classList.add("kj-entered");
+            } else {
+              document.documentElement.classList.add("kj-splash-pending");
+            }
+          } catch (e) {
+            document.documentElement.classList.add("kj-splash-pending");
+          }
+        })();
+      </script>
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,6 +88,7 @@ const zhHref = new URL(localizedPath("zh", slug), Astro.site).href;
     <title>{fullTitle}</title>
   </head>
   <body>
+    {splash && <SplashGate lang={lang} />}
     <a class="skip-link" href="#main">{t("a11y.skip")}</a>
     <Header lang={lang} />
     <main id="main">

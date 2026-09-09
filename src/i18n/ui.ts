@@ -47,6 +47,11 @@ export const ui = {
     'home.ctaRsvp': 'RSVP',
     'home.ctaDetails': 'Wedding details',
     'home.heroAlt': 'Kevin and Joyce, engagement portrait',
+    'splash.eyebrow': "You're invited",
+    'splash.names': 'Kevin & Joyce',
+    'splash.date': 'January 2, 2027',
+    'splash.enter': 'Enter',
+    'splash.alt': 'Kevin and Joyce',
     'home.storyEyebrow': 'Our story',
     'home.storyTitle': 'How we got here',
     'home.storyBody':
@@ -239,6 +244,11 @@ export const ui = {
     'home.ctaRsvp': '回函 RSVP',
     'home.ctaDetails': '婚禮資訊',
     'home.heroAlt': 'Kevin 與 Joyce 的訂婚照',
+    'splash.eyebrow': '誠摯邀請',
+    'splash.names': 'Kevin & Joyce',
+    'splash.date': '2027 年 1 月 2 日',
+    'splash.enter': '進入',
+    'splash.alt': 'Kevin 與 Joyce',
     'home.storyEyebrow': '我們的故事',
     'home.storyTitle': '一路走到這裡',
     'home.storyBody':

@@ -50,3 +50,13 @@ Fields collected: name(s), email, attending (yes/no/maybe), guest count, dietary
 - Toggle EN | zh in header/footer; strings in `src/i18n/ui.ts`
 - Astro i18n locales `en` + `zh`, `prefixDefaultLocale: false`
 
+## Splash intro gate
+
+First visit to `/` or `/zh/` shows a full-screen photo intro. Clicking **Enter** / **進入** sets `localStorage.kj-entered=1` and reveals the homepage. Returning visitors skip the splash.
+
+To re-test the splash in a browser console:
+
+```js
+localStorage.removeItem('kj-entered');
+location.reload();
+```
