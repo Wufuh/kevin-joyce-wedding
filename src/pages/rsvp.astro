@@ -50,6 +50,17 @@ const formAction = formspreeId
             </label>
 
             <label>
+              {t("rsvp.address")}
+              <span class="hint">{t("rsvp.addressHint")}</span>
+              <textarea
+                name="address"
+                required
+                autocomplete="street-address"
+                placeholder={t("rsvp.addressPlaceholder")}
+              />
+            </label>
+
+            <label>
               {t("rsvp.attending")}
               <select name="attending" required>
                 <option value="" disabled selected>

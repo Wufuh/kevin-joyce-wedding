@@ -33,7 +33,7 @@ PUBLIC_FORMSPREE_ID=your_form_id_here
 - On Vercel, add the same variable in Project Settings - Environment Variables.
 - Without `PUBLIC_FORMSPREE_ID`, the RSVP page shows a short setup note instead of the form.
 
-Fields collected: name(s), email, attending (yes/no/maybe), guest count, dietary notes, message.
+Fields collected: name(s), email, mailing address, attending (yes/no/maybe), guest count, dietary notes, message.
 
 ## Deploy on Vercel
 
