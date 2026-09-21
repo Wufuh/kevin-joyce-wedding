@@ -178,6 +178,8 @@ export const ui = {
       'A few favorite chapters from our journey — told as a little comic strip.',
     'story.photoSoon': 'Photo coming soon',
     'story.kobeAlt': 'Kobe, our black cocker spaniel',
+    'story.proposalAlt':
+      'Kevin and Joyce celebrating their engagement',
     'story.panel1Alt':
       'Illustrated anime-style scene of Kevin and Joyce matching and chatting online',
     'story.panel2Alt':
@@ -391,6 +393,8 @@ export const ui = {
     'story.lede': '幾個我們最愛的篇章——用溫暖的漫畫格說給你們聽。',
     'story.photoSoon': '照片即將補上',
     'story.kobeAlt': '我們的黑色可卡犬 Kobe',
+    'story.proposalAlt':
+      'Kevin 與 Joyce 慶祝訂婚的一刻',
     'story.panel1Alt':
       '動漫風格插畫：Kevin 與 Joyce 在線上配對聊天',
     'story.panel2Alt':
