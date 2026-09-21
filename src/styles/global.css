@@ -736,7 +736,7 @@ html.kj-entered .splash-gate {
 
 .comic-photo-kobe {
   object-fit: cover;
-  object-position: center 65%;
+  object-position: center 52%;
 }
 
 .comic-frame:has(.comic-photo-anime)::after {
