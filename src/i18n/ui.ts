@@ -178,6 +178,16 @@ export const ui = {
       'A few favorite chapters from our journey — told as a little comic strip.',
     'story.photoSoon': 'Photo coming soon',
     'story.kobeAlt': 'Kobe, our black cocker spaniel',
+    'story.panel1Alt':
+      'Illustrated anime-style scene of Kevin and Joyce matching and chatting online',
+    'story.panel2Alt':
+      'Illustrated anime-style scene of Kevin and Joyce on their first Japanese dinner date',
+    'story.panel3Alt':
+      'Illustrated anime-style scene of Kevin and Joyce becoming an official couple',
+    'story.panel4Alt':
+      'Illustrated anime-style scene of the Tokyo proposal',
+    'story.panel6Alt':
+      'Illustrated anime-style scene looking ahead to celebrating in Taipei',
     'story.panel1Title': 'Met online',
     'story.panel1Caption':
       "We matched online and talked like we'd known each other forever.",
@@ -381,6 +391,16 @@ export const ui = {
     'story.lede': '幾個我們最愛的篇章——用溫暖的漫畫格說給你們聽。',
     'story.photoSoon': '照片即將補上',
     'story.kobeAlt': '我們的黑色可卡犬 Kobe',
+    'story.panel1Alt':
+      '動漫風格插畫：Kevin 與 Joyce 在線上配對聊天',
+    'story.panel2Alt':
+      '動漫風格插畫：Kevin 與 Joyce 的第一次日式晚餐約會',
+    'story.panel3Alt':
+      '動漫風格插畫：Kevin 與 Joyce 正式交往',
+    'story.panel4Alt':
+      '動漫風格插畫：東京求婚場景',
+    'story.panel6Alt':
+      '動漫風格插畫：期待在台北慶祝的下一章',
     'story.panel1Title': '線上相遇',
     'story.panel1Caption':
       '我們在線上配對，聊起天來像認識了很久一樣。',
