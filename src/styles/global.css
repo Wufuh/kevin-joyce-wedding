@@ -721,6 +721,15 @@ html.kj-entered .splash-gate {
   filter: saturate(1.05) contrast(1.02);
 }
 
+.comic-frame-proposal {
+  aspect-ratio: 4 / 3;
+}
+
+.comic-photo-proposal {
+  object-fit: cover;
+  object-position: 28% 42%;
+}
+
 .comic-frame:has(.comic-photo-anime)::after {
   content: "";
   position: absolute;

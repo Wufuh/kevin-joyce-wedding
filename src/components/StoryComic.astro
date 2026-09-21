@@ -23,6 +23,8 @@ const panels: {
   image: ImageMetadata;
   kind: "anime" | "photo";
   tone: string;
+  frameClass?: string;
+  photoClass?: string;
 }[] = [
   {
     n: 1,
@@ -68,6 +70,8 @@ const panels: {
     image: proposalYes,
     kind: "photo",
     tone: "blush",
+    frameClass: "comic-frame-proposal",
+    photoClass: "comic-photo-proposal",
   },
   {
     n: 6,
@@ -87,14 +91,18 @@ const panels: {
       {
         panels.map((panel) => (
           <li class={`comic-panel tone-${panel.tone}`}>
-            <figure class="comic-frame">
+            <figure class:list={["comic-frame", panel.frameClass]}>
               <Image
                 src={panel.image}
                 alt={t(panel.altKey)}
                 widths={[400, 600, 900, 1200]}
                 sizes="(min-width: 768px) 42vw, 90vw"
                 quality={82}
-                class:list={["comic-photo", panel.kind === "anime" && "comic-photo-anime"]}
+                class:list={[
+                  "comic-photo",
+                  panel.kind === "anime" && "comic-photo-anime",
+                  panel.photoClass,
+                ]}
                 loading="lazy"
               />
             </figure>
