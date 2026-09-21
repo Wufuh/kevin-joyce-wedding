@@ -730,6 +730,15 @@ html.kj-entered .splash-gate {
   object-position: 28% 42%;
 }
 
+.comic-frame-kobe {
+  aspect-ratio: 4 / 5;
+}
+
+.comic-photo-kobe {
+  object-fit: cover;
+  object-position: center 65%;
+}
+
 .comic-frame:has(.comic-photo-anime)::after {
   content: "";
   position: absolute;
