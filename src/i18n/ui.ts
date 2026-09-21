@@ -55,7 +55,7 @@ export const ui = {
     'home.storyEyebrow': 'Our story',
     'home.storyTitle': 'How we got here',
     'home.storyBody':
-      'A few favorite chapters from our journey together — still being written, and editable whenever we add more.',
+      'From matching online to a Tokyo yes — and welcoming Kobe along the way. Next stop: Taipei, January 2, 2027.',
     'home.storyLink': 'Read our story',
     'home.travelEyebrow': 'Visiting Taipei',
     'home.travelTitle': 'Travel & stay',
@@ -171,23 +171,30 @@ export const ui = {
       'Set PUBLIC_FORMSPREE_ID in your environment (see README) to enable the on-site RSVP form. Create a free form at formspree.io, then restart the dev server or rebuild.',
     'story.metaTitle': 'Our Story',
     'story.metaDescription':
-      'The story of Kevin and Joyce — placeholder chapters you can edit anytime.',
+      'The story of Kevin and Joyce — from matching online to saying yes in Tokyo, and celebrating in Taipei on January 2, 2027.',
     'story.eyebrow': 'Our story',
     'story.title': 'How we found each other',
     'story.lede':
-      "These sections are placeholders — swap in your own words whenever you're ready.",
-    'story.metTitle': 'How we met',
-    'story.metBody':
-      '[Edit this] Share the first hello — where you were, what stood out, and the small moment that made you curious about each other.',
-    'story.loveTitle': 'Falling in love',
-    'story.loveBody':
-      '[Edit this] Favorite early dates, inside jokes, and the everyday habits that made life together feel natural.',
-    'story.proposalTitle': 'The proposal',
-    'story.proposalBody':
-      '[Edit this] Tell the proposal story — the setting, the surprise (or not), and how you celebrated afterward.',
-    'story.aheadTitle': 'Looking ahead',
-    'story.aheadBody':
-      "[Edit this] A short note about what you're most excited to share with family and friends in Taipei.",
+      'A few favorite chapters from our journey — told as a little comic strip.',
+    'story.photoSoon': 'Photo coming soon',
+    'story.kobeAlt': 'Kobe, our black cocker spaniel',
+    'story.panel1Title': 'Met online',
+    'story.panel1Caption':
+      "We matched online and talked like we'd known each other forever.",
+    'story.panel2Title': 'First date',
+    'story.panel2Caption':
+      'A Japanese dinner that turned into instant chemistry.',
+    'story.panel3Title': 'Official',
+    'story.panel3Caption':
+      'A few months (and many dates) later, we made it official.',
+    'story.panel4Title': 'Tokyo proposal',
+    'story.panel4Caption': 'He proposed in Tokyo — yes forever.',
+    'story.panel5Title': 'Kobe',
+    'story.panel5Caption':
+      'A year in, we got Kobe, our adorable cocker spaniel.',
+    'story.panel6Title': 'Next chapter',
+    'story.panel6Caption':
+      'Next stop: celebrating with you in Taipei, January 2, 2027.',
     'registry.metaTitle': 'Registry',
     'registry.metaDescription':
       'Registry links for Kevin and Joyce — coming soon.',
@@ -255,7 +262,7 @@ export const ui = {
     'home.storyEyebrow': '我們的故事',
     'home.storyTitle': '一路走到這裡',
     'home.storyBody':
-      '分享我們旅途中幾個喜愛的篇章——內容仍在書寫中，之後也會再更新。',
+      '從線上相遇、東京的「我願意」，到迎來 Kobe。下一站：2027 年 1 月 2 日，台北見。',
     'home.storyLink': '閱讀我們的故事',
     'home.travelEyebrow': '造訪台北',
     'home.travelTitle': '交通與住宿',
@@ -368,22 +375,28 @@ export const ui = {
       '請在環境變數中設定 PUBLIC_FORMSPREE_ID（詳見 README）以啟用回函表單。可至 formspree.io 免費建立表單，再重新啟動開發伺服器或重新建置。',
     'story.metaTitle': '我們的故事',
     'story.metaDescription':
-      'Kevin 與 Joyce 的故事——可隨時編輯的佔位章節。',
+      'Kevin 與 Joyce 的故事——從線上相遇、東京求婚，到 2027 年 1 月 2 日在台北慶祝。',
     'story.eyebrow': '我們的故事',
     'story.title': '我們如何相遇',
-    'story.lede': '以下章節為佔位內容——準備好時再換成你們自己的文字即可。',
-    'story.metTitle': '初遇',
-    'story.metBody':
-      '【請編輯】分享第一次打招呼的故事——當時在哪裡、什麼讓你印象深刻，以及讓你們對彼此產生好奇的小小瞬間。',
-    'story.loveTitle': '墜入愛河',
-    'story.loveBody':
-      '【請編輯】早期約會的回憶、專屬笑點，以及那些讓兩人生活變得自然而然的日常習慣。',
-    'story.proposalTitle': '求婚',
-    'story.proposalBody':
-      '【請編輯】說說求婚那天——場景、驚喜（或不驚喜），以及之後如何慶祝。',
-    'story.aheadTitle': '展望未來',
-    'story.aheadBody':
-      '【請編輯】簡短聊聊你們最期待在台北與家人朋友分享的是什麼。',
+    'story.lede': '幾個我們最愛的篇章——用溫暖的漫畫格說給你們聽。',
+    'story.photoSoon': '照片即將補上',
+    'story.kobeAlt': '我們的黑色可卡犬 Kobe',
+    'story.panel1Title': '線上相遇',
+    'story.panel1Caption':
+      '我們在線上配對，聊起天來像認識了很久一樣。',
+    'story.panel2Title': '第一次約會',
+    'story.panel2Caption': '一頓日式晚餐，當場就擦出火花。',
+    'story.panel3Title': '正式交往',
+    'story.panel3Caption':
+      '幾個月（還有無數次約會）之後，我們正式在一起了。',
+    'story.panel4Title': '東京求婚',
+    'story.panel4Caption': '他在東京求婚——永遠的「我願意」。',
+    'story.panel5Title': 'Kobe',
+    'story.panel5Caption':
+      '交往滿一年，我們迎來了可愛的可卡犬 Kobe。',
+    'story.panel6Title': '下一章',
+    'story.panel6Caption':
+      '下一站：2027 年 1 月 2 日，在台北與你們一同慶祝。',
     'registry.metaTitle': '禮物清單',
     'registry.metaDescription': 'Kevin 與 Joyce 的禮物清單連結——即將推出。',
     'registry.eyebrow': '禮物',

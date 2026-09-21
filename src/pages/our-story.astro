@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import StoryComic from "../components/StoryComic.astro";
 import { useTranslations } from "../i18n/utils";
 
 const lang = "en" as const;
@@ -19,24 +20,5 @@ const t = useTranslations(lang);
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container grid-2">
-      <article class="card">
-        <h2>{t("story.metTitle")}</h2>
-        <p>{t("story.metBody")}</p>
-      </article>
-      <article class="card">
-        <h2>{t("story.loveTitle")}</h2>
-        <p>{t("story.loveBody")}</p>
-      </article>
-      <article class="card">
-        <h2>{t("story.proposalTitle")}</h2>
-        <p>{t("story.proposalBody")}</p>
-      </article>
-      <article class="card">
-        <h2>{t("story.aheadTitle")}</h2>
-        <p>{t("story.aheadBody")}</p>
-      </article>
-    </div>
-  </section>
+  <StoryComic lang={lang} />
 </BaseLayout>

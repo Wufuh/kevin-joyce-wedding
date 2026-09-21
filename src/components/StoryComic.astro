@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import kobeImage from "../assets/kobe.jpg";
+import { useTranslations, type Lang, type UiKey } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const panels: {
+  n: number;
+  titleKey: UiKey;
+  captionKey: UiKey;
+  photo: "kobe" | null;
+  tone: string;
+}[] = [
+  {
+    n: 1,
+    titleKey: "story.panel1Title",
+    captionKey: "story.panel1Caption",
+    photo: null,
+    tone: "rose",
+  },
+  {
+    n: 2,
+    titleKey: "story.panel2Title",
+    captionKey: "story.panel2Caption",
+    photo: null,
+    tone: "cream",
+  },
+  {
+    n: 3,
+    titleKey: "story.panel3Title",
+    captionKey: "story.panel3Caption",
+    photo: null,
+    tone: "sage",
+  },
+  {
+    n: 4,
+    titleKey: "story.panel4Title",
+    captionKey: "story.panel4Caption",
+    photo: null,
+    tone: "blush",
+  },
+  {
+    n: 5,
+    titleKey: "story.panel5Title",
+    captionKey: "story.panel5Caption",
+    photo: "kobe",
+    tone: "warm",
+  },
+  {
+    n: 6,
+    titleKey: "story.panel6Title",
+    captionKey: "story.panel6Caption",
+    photo: null,
+    tone: "gold",
+  },
+];
+---
+
+<section class="section section-alt story-comic-section">
+  <div class="container">
+    <ol class="comic-strip" aria-label={t("story.title")}>
+      {
+        panels.map((panel) => (
+          <li class={`comic-panel tone-${panel.tone}`}>
+            <figure class="comic-frame">
+              {panel.photo === "kobe" ? (
+                <Image
+                  src={kobeImage}
+                  alt={t("story.kobeAlt")}
+                  widths={[400, 600, 900, 1200]}
+                  sizes="(min-width: 768px) 42vw, 90vw"
+                  quality={82}
+                  class="comic-photo"
+                  loading="lazy"
+                />
+              ) : (
+                <div class="comic-placeholder" aria-hidden="true">
+                  <span class="comic-monogram">K&amp;J</span>
+                  <span class="comic-panel-num">
+                    {String(panel.n).padStart(2, "0")}
+                  </span>
+                  <span class="comic-photo-soon">{t("story.photoSoon")}</span>
+                </div>
+              )}
+            </figure>
+            <div class="comic-caption">
+              <h2 class="comic-caption-title">{t(panel.titleKey)}</h2>
+              <p class="comic-caption-text">{t(panel.captionKey)}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
