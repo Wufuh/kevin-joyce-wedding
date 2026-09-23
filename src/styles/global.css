@@ -747,6 +747,38 @@ html.kj-entered .splash-gate {
   object-position: center 52%;
 }
 
+/* Kobe diptych: puppy + family selfie side-by-side (stack on mobile) */
+.comic-frame-diptych {
+  aspect-ratio: auto;
+}
+
+.comic-diptych {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: 100%;
+  background: rgba(139, 107, 90, 0.18);
+}
+
+.comic-diptych .comic-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.comic-photo-kobe-family {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+@media (max-width: 767px) {
+  .comic-diptych {
+    grid-template-columns: 1fr;
+  }
+}
+
 .comic-frame-first-date {
   aspect-ratio: 4 / 3;
 }
