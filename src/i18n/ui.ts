@@ -64,22 +64,22 @@ export const ui = {
     'home.travelLink': 'Plan your trip',
     'details.metaTitle': 'Details',
     'details.metaDescription':
-      'Wedding details for Kevin and Joyce on January 2, 2027 at the Mandarin Oriental, Taipei — cocktail hour at 5:00 PM, reception only, cocktail attire.',
+      'Wedding details for Kevin and Joyce on January 2, 2027 at the Mandarin Oriental, Taipei — cocktail hour at 5:30 PM, reception only, cocktail attire.',
     'details.eyebrow': 'The celebration',
     'details.title': 'Wedding details',
     'details.lede':
       'Everything you need for the day — a reception-only celebration with cocktail hour to begin.',
     'details.dateTitle': 'Date',
     'details.dateValue': 'January 2, 2027',
-    'details.dateNote': 'Reception only — there will be no ceremony.',
+    'details.dateNote': '',
     'details.venueTitle': 'Venue',
     'details.venueName': 'Mandarin Oriental, Taipei',
     'details.venueAddress':
       '158 Dunhua North Road\nSongshan District, Taipei, Taiwan',
     'details.scheduleTitle': 'Schedule',
-    'details.scheduleValue': 'Cocktail hour · 5:00 PM',
+    'details.scheduleValue': 'Cocktail hour · 5:30 PM',
     'details.scheduleNote':
-      'Join us for cocktails at 5:00 PM. Dinner and celebration to follow.',
+      'Join us for cocktails at 5:30 PM. Dinner and celebration to follow.',
     'details.dressTitle': 'Dress code',
     'details.dressValue': 'Cocktail',
     'details.dressNote':
@@ -227,7 +227,7 @@ export const ui = {
     'faq.lede': 'Quick answers for the celebration.',
     'faq.q1': 'When is the wedding?',
     'faq.a1':
-      'January 2, 2027 at the Mandarin Oriental, Taipei. Cocktail hour begins at 5:00 PM, with dinner and celebration to follow. This is a reception-only celebration — there will be no ceremony.',
+      'January 2, 2027 at the Mandarin Oriental, Taipei. Cocktail hour begins at 5:30 PM, with dinner and celebration to follow. This is a reception-only celebration — there will be no ceremony.',
     'faq.q2': 'Where should we stay?',
     'faq.a2':
       'Staying at or near the Mandarin Oriental, Taipei is most convenient. See Travel & Stay for neighborhood guidance.',
@@ -285,21 +285,21 @@ export const ui = {
     'home.travelLink': '規劃行程',
     'details.metaTitle': '婚禮資訊',
     'details.metaDescription':
-      'Kevin 與 Joyce 婚禮資訊：2027 年 1 月 2 日於台北文華東方酒店，雞尾酒會 下午 5:00 開始，僅宴客無儀式，服裝為雞尾酒會裝束。',
+      'Kevin 與 Joyce 婚禮資訊：2027 年 1 月 2 日於台北文華東方酒店，雞尾酒會 下午 5:30 開始，僅宴客無儀式，服裝為雞尾酒會裝束。',
     'details.eyebrow': '慶祝時刻',
     'details.title': '婚禮資訊',
     'details.lede':
       '當天所需資訊一次看完——僅宴客（無儀式），以雞尾酒會揭開序幕。',
     'details.dateTitle': '日期',
     'details.dateValue': '2027 年 1 月 2 日',
-    'details.dateNote': '僅宴客——當日沒有舉行儀式。',
+    'details.dateNote': '',
     'details.venueTitle': '地點',
     'details.venueName': '台北文華東方酒店',
     'details.venueAddress': '台灣台北市松山區\n敦化北路 158 號',
     'details.scheduleTitle': '時程',
-    'details.scheduleValue': '雞尾酒會 · 下午 5:00',
+    'details.scheduleValue': '雞尾酒會 · 下午 5:30',
     'details.scheduleNote':
-      '請於下午 5:00 與我們共進雞尾酒會，接著是晚宴與慶祝。',
+      '請於下午 5:30 與我們共進雞尾酒會，接著是晚宴與慶祝。',
     'details.dressTitle': '服裝',
     'details.dressValue': 'Cocktail（雞尾酒會裝束）',
     'details.dressNote':
@@ -442,7 +442,7 @@ export const ui = {
     'faq.lede': '關於這場慶祝的快速解答。',
     'faq.q1': '婚禮是什麼時候？',
     'faq.a1':
-      '2027 年 1 月 2 日於台北文華東方酒店。雞尾酒會於下午 5:00 開始，接著是晚宴與慶祝。本次僅宴客——當日沒有舉行儀式。',
+      '2027 年 1 月 2 日於台北文華東方酒店。雞尾酒會於下午 5:30 開始，接著是晚宴與慶祝。本次僅宴客——當日沒有舉行儀式。',
     'faq.q2': '建議住哪裡？',
     'faq.a2':
       '住在台北文華東方酒店或附近最方便。更多周邊資訊請見「交通與住宿」。',

@@ -25,7 +25,7 @@ const addressLines = t("details.venueAddress").split("\n");
       <article class="card">
         <h2>{t("details.dateTitle")}</h2>
         <p><strong>{t("details.dateValue")}</strong></p>
-        <p>{t("details.dateNote")}</p>
+        {t("details.dateNote") && <p>{t("details.dateNote")}</p>}
       </article>
       <article class="card">
         <h2>{t("details.venueTitle")}</h2>
