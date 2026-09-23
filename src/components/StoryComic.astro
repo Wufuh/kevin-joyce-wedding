@@ -5,7 +5,7 @@ import proposalYes from "../assets/proposal-yes.jpg";
 import panel1 from "../assets/story-panel-1.jpg";
 import firstDate from "../assets/first-date.jpg";
 import panel3 from "../assets/story-panel-3.jpg";
-import panel6 from "../assets/story-panel-6.jpg";
+import finale from "../assets/finale.jpg";
 import { useTranslations, type Lang, type UiKey } from "../i18n/utils";
 
 interface Props {
@@ -82,9 +82,11 @@ const panels: {
     titleKey: "story.panel6Title",
     captionKey: "story.panel6Caption",
     altKey: "story.panel6Alt",
-    image: panel6,
-    kind: "anime",
+    image: finale,
+    kind: "photo",
     tone: "gold",
+    frameClass: "comic-frame-finale",
+    photoClass: "comic-photo-finale",
   },
 ];
 ---

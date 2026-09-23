@@ -189,7 +189,7 @@ export const ui = {
     'story.panel4Alt':
       'Illustrated anime-style scene of the Tokyo proposal',
     'story.panel6Alt':
-      'Illustrated anime-style scene looking ahead to celebrating in Taipei',
+      'Kevin and Joyce walking together in wedding attire',
     'story.panel1Title': 'Met online',
     'story.panel1Caption':
       "We matched online and talked like we'd known each other forever.",
@@ -404,7 +404,7 @@ export const ui = {
     'story.panel4Alt':
       '動漫風格插畫：東京求婚場景',
     'story.panel6Alt':
-      '動漫風格插畫：期待在台北慶祝的下一章',
+      'Kevin 與 Joyce 身著婚禮服裝一同漫步',
     'story.panel1Title': '線上相遇',
     'story.panel1Caption':
       '我們在線上配對，聊起天來像認識了很久一樣。',

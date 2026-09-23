@@ -756,6 +756,15 @@ html.kj-entered .splash-gate {
   object-position: center 32%;
 }
 
+.comic-frame-finale {
+  aspect-ratio: 4 / 5;
+}
+
+.comic-photo-finale {
+  object-fit: cover;
+  object-position: center 58%;
+}
+
 .comic-frame:has(.comic-photo-anime)::after {
   content: "";
   position: absolute;
