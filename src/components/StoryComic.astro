@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import kobeImage from "../assets/kobe.jpg";
 import proposalYes from "../assets/proposal-yes.jpg";
 import panel1 from "../assets/story-panel-1.jpg";
-import panel2 from "../assets/story-panel-2.jpg";
+import firstDate from "../assets/first-date.jpg";
 import panel3 from "../assets/story-panel-3.jpg";
 import panel6 from "../assets/story-panel-6.jpg";
 import { useTranslations, type Lang, type UiKey } from "../i18n/utils";
@@ -40,9 +40,11 @@ const panels: {
     titleKey: "story.panel2Title",
     captionKey: "story.panel2Caption",
     altKey: "story.panel2Alt",
-    image: panel2,
-    kind: "anime",
+    image: firstDate,
+    kind: "photo",
     tone: "cream",
+    frameClass: "comic-frame-first-date",
+    photoClass: "comic-photo-first-date",
   },
   {
     n: 3,
