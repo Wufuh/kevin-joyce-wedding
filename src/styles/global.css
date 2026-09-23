@@ -762,7 +762,7 @@ html.kj-entered .splash-gate {
 
 .comic-photo-finale {
   object-fit: cover;
-  object-position: center 58%;
+  object-position: center 72%;
 }
 
 .comic-frame:has(.comic-photo-anime)::after {
