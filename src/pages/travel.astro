@@ -67,8 +67,10 @@ function directionsLink(origin: string) {
           </li>
           <li>
             <strong>{t("travel.roomRateLabel")}</strong>
-            {" "}
-            {t("travel.roomRate")}
+            <ul class="travel-list travel-rate-list">
+              <li>{t("travel.roomRateJan2")}</li>
+              <li>{t("travel.roomRateJan3")}</li>
+            </ul>
           </li>
         </ul>
         <p class="form-note">{t("travel.roomPending")}</p>

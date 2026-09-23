@@ -409,6 +409,14 @@ p { margin: 0 0 1rem; }
   margin-bottom: 0.55rem;
 }
 
+.travel-rate-list {
+  margin: 0.4rem 0 0;
+}
+
+.travel-rate-list li {
+  margin-bottom: 0.25rem;
+}
+
 .soft-cta {
   margin: 1.25rem 0 0;
   padding: 1rem 1.15rem;

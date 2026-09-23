@@ -98,14 +98,14 @@ export const ui = {
     'travel.roomDeadlineLabel': 'Deadline:',
     'travel.roomDeadline':
       'please contact the couple by October 31, 2026 if you would like a room in the block.',
-    'travel.roomRateLabel': 'Rate:',
-    'travel.roomRate':
-      'approximately 40% off the usual rate — approximate and pending final confirmation with the hotel.',
+    'travel.roomRateLabel': 'Group rates:',
+    'travel.roomRateJan2': 'January 2 — NT$17,600 + tax',
+    'travel.roomRateJan3': 'January 3 — NT$9,600 + tax',
     'travel.roomPending':
-      'We are still finalizing block details with the hotel, so we are not publishing a booking link or group code just yet. Thank you for your patience.',
+      'Rates are per night, plus tax. Availability is limited.',
     'travel.roomCtaStrong': 'Contact the couple',
     'travel.roomCtaRest':
-      ' by October 31, 2026 if you would like a room in the wedding block. We will share booking steps once the hotel confirms the final details.',
+      ' by October 31, 2026 if you would like a room in the wedding block.',
     'travel.directionsEyebrow': 'Directions',
     'travel.directionsTitle': 'Getting to the hotel',
     'travel.directionsLede':
@@ -316,14 +316,14 @@ export const ui = {
     'travel.roomDeadlineLabel': '截止時間：',
     'travel.roomDeadline':
       '若希望加入住房優惠，請於 2026 年 10 月 31 日前聯繫新人。',
-    'travel.roomRateLabel': '優惠：',
-    'travel.roomRate':
-      '約減 40%（約六折）——數字為暫估，最終以飯店確認為準。',
+    'travel.roomRateLabel': '團體房價：',
+    'travel.roomRateJan2': '1月2日 — NT$17,600＋稅',
+    'travel.roomRateJan3': '1月3日 — NT$9,600＋稅',
     'travel.roomPending':
-      '我們仍在與飯店確認住房細節，因此尚未公布訂房連結或團體代碼。感謝您的耐心等候。',
+      '房價為每晚費用，另加稅金。名額有限。',
     'travel.roomCtaStrong': '請聯繫新人',
     'travel.roomCtaRest':
-      '：若希望加入婚禮住房優惠，請於 2026 年 10 月 31 日前與我們聯絡。待飯店確認最終細節後，我們會再告知訂房方式。',
+      '：若希望加入婚禮住房優惠，請於 2026 年 10 月 31 日前與我們聯絡。',
     'travel.directionsEyebrow': '路線',
     'travel.directionsTitle': '前往飯店',
     'travel.directionsLede':
