@@ -756,6 +756,16 @@ html.kj-entered .splash-gate {
   object-position: center 32%;
 }
 
+
+.comic-frame-met {
+  aspect-ratio: 4 / 5;
+}
+
+.comic-photo-met {
+  object-fit: cover;
+  object-position: center 28%;
+}
+
 .comic-frame-finale {
   aspect-ratio: 4 / 5;
 }

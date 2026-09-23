@@ -181,7 +181,7 @@ export const ui = {
     'story.proposalAlt':
       'Kevin and Joyce celebrating their engagement',
     'story.panel1Alt':
-      'Illustrated anime-style scene of Kevin and Joyce matching and chatting online',
+      'Kevin and Joyce smiling together on a couch',
     'story.panel2Alt':
       'Kevin and Joyce smiling together on their first date at an outdoor dinner table',
     'story.panel3Alt':
@@ -396,7 +396,7 @@ export const ui = {
     'story.proposalAlt':
       'Kevin 與 Joyce 慶祝訂婚的一刻',
     'story.panel1Alt':
-      '動漫風格插畫：Kevin 與 Joyce 在線上配對聊天',
+      'Kevin 與 Joyce 在沙發上一起微笑的自拍',
     'story.panel2Alt':
       'Kevin 與 Joyce 第一次約會時在戶外餐桌前微笑的合照',
     'story.panel3Alt':
