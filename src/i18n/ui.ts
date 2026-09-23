@@ -187,7 +187,7 @@ export const ui = {
     'story.panel2Alt':
       'Kevin and Joyce smiling together on their first date at an outdoor dinner table',
     'story.panel3Alt':
-      'Illustrated anime-style scene of Kevin and Joyce becoming an official couple',
+      'Kevin and Joyce celebrating with a sparkler cake',
     'story.panel4Alt':
       'Illustrated anime-style scene of the Tokyo proposal',
     'story.panel6Alt':
@@ -404,7 +404,7 @@ export const ui = {
     'story.panel2Alt':
       'Kevin 與 Joyce 第一次約會時在戶外餐桌前微笑的合照',
     'story.panel3Alt':
-      '動漫風格插畫：Kevin 與 Joyce 正式交往',
+      'Kevin 與 Joyce 用煙火蛋糕慶祝',
     'story.panel4Alt':
       '動漫風格插畫：東京求婚場景',
     'story.panel6Alt':
