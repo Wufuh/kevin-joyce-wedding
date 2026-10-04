@@ -45,8 +45,8 @@ Fields collected: name(s), email, mailing address, attending (yes/no/maybe), gue
 
 ## Languages
 
-- English: `/`, `/details`, `/travel`, `/rsvp`, `/our-story`, `/registry`, `/faq`
-- Traditional Chinese: `/zh/`, `/zh/details`, `/zh/travel`, `/zh/rsvp`, `/zh/our-story`, `/zh/registry`, `/zh/faq`
+- English: `/`, `/details`, `/travel`, `/rsvp`, `/our-story`, `/photos`, `/faq`
+- Traditional Chinese: `/zh/`, `/zh/details`, `/zh/travel`, `/zh/rsvp`, `/zh/our-story`, `/zh/photos`, `/zh/faq`
 - Toggle EN | zh in header/footer; strings in `src/i18n/ui.ts`
 - Astro i18n locales `en` + `zh`, `prefixDefaultLocale: false`
 

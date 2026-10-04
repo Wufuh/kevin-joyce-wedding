@@ -10,10 +10,10 @@ export const defaultLang: Lang = 'en';
 export const routes = [
   '',
   'our-story',
+  'photos',
   'details',
   'travel',
   'rsvp',
-  'registry',
   'faq',
 ] as const;
 
@@ -30,10 +30,10 @@ export const ui = {
     'a11y.langSwitch': 'Language',
     'nav.home': 'Home',
     'nav.ourStory': 'Our Story',
+    'nav.photos': 'Photos',
     'nav.details': 'Details',
     'nav.travel': 'Travel & Stay',
     'nav.rsvp': 'RSVP',
-    'nav.registry': 'Registry',
     'nav.faq': 'FAQ',
     'footer.dateVenue': 'January 2, 2027 · Mandarin Oriental, Taipei',
     'home.metaTitle': 'Home',
@@ -209,16 +209,29 @@ export const ui = {
     'story.panel6Title': 'Next chapter',
     'story.panel6Caption':
       'Next stop: celebrating with you in Taipei, January 2, 2027.',
-    'registry.metaTitle': 'Registry',
-    'registry.metaDescription':
-      'Registry links for Kevin and Joyce — coming soon.',
-    'registry.eyebrow': 'Gifts',
-    'registry.title': 'Registry',
-    'registry.lede':
-      "Your presence is the gift we're most looking forward to. If you'd like to give something as well, registry links will appear here soon.",
-    'registry.comingTitle': 'Links coming soon',
-    'registry.comingBody':
-      "We'll add store or experience registries here when they're ready. Placeholder for future links — nothing to click just yet.",
+    'photos.metaTitle': 'Photos',
+    'photos.metaDescription':
+      'A small gallery of favorite moments from Kevin and Joyce.',
+    'photos.eyebrow': 'Gallery',
+    'photos.title': 'Photos',
+    'photos.lede': 'A few favorite moments. More photos to come.',
+    'photos.metCaption': 'Met online',
+    'photos.metAlt': 'Kevin and Joyce smiling together on a couch',
+    'photos.firstDateCaption': 'First date',
+    'photos.firstDateAlt':
+      'Kevin and Joyce smiling together at an outdoor dinner table',
+    'photos.officialCaption': 'Official',
+    'photos.officialAlt': 'Kevin and Joyce celebrating with a sparkler cake',
+    'photos.kobeCaption': 'Kobe',
+    'photos.kobeAlt': 'Kobe, our black cocker spaniel',
+    'photos.kobeFamilyCaption': 'With Kobe',
+    'photos.kobeFamilyAlt': 'Kevin and Joyce with Kobe on the bed',
+    'photos.yesCaption': 'Yes',
+    'photos.yesAlt': 'Kevin and Joyce celebrating their engagement',
+    'photos.finaleCaption': 'Walking together',
+    'photos.finaleAlt': 'Kevin and Joyce walking together in wedding attire',
+    'photos.splashCaption': 'A favorite portrait',
+    'photos.splashAlt': 'Kevin and Joyce smiling together in wedding attire',
     'faq.metaTitle': 'FAQ',
     'faq.metaDescription':
       "Frequently asked questions about Kevin and Joyce's wedding on January 2, 2027 in Taipei.",
@@ -240,6 +253,9 @@ export const ui = {
     'faq.q5': 'Can I bring a plus-one?',
     'faq.a5':
       "Please follow what your invitation indicates. If you're unsure, note it in your RSVP message and we'll follow up.",
+    'faq.q6': 'Are you accepting gifts?',
+    'faq.a6':
+      "We're not accepting gifts. Your presence with us is truly enough.",
   },
   zh: {
     'meta.siteName': 'Kevin & Joyce',
@@ -251,10 +267,10 @@ export const ui = {
     'a11y.langSwitch': '語言',
     'nav.home': '首頁',
     'nav.ourStory': '我們的故事',
+    'nav.photos': '相片',
     'nav.details': '婚禮資訊',
     'nav.travel': '交通與住宿',
     'nav.rsvp': '回函',
-    'nav.registry': '禮物清單',
     'nav.faq': '常見問題',
     'footer.dateVenue': '2027 年 1 月 2 日 · 台北文華東方酒店',
     'home.metaTitle': '首頁',
@@ -425,15 +441,27 @@ export const ui = {
     'story.panel6Title': '下一章',
     'story.panel6Caption':
       '下一站：2027 年 1 月 2 日，在台北與你們一同慶祝。',
-    'registry.metaTitle': '禮物清單',
-    'registry.metaDescription': 'Kevin 與 Joyce 的禮物清單連結——即將推出。',
-    'registry.eyebrow': '禮物',
-    'registry.title': '禮物清單',
-    'registry.lede':
-      '您的出席就是我們最期待的禮物。若也想致贈心意，禮物清單連結將很快公布於此。',
-    'registry.comingTitle': '連結即將推出',
-    'registry.comingBody':
-      '準備好後，我們會在此新增商店或體驗類禮物清單。目前僅為佔位，尚無可點選的連結。',
+    'photos.metaTitle': '相片',
+    'photos.metaDescription': 'Kevin 與 Joyce 喜歡的一些片刻。',
+    'photos.eyebrow': '影像',
+    'photos.title': '相片',
+    'photos.lede': '一些我們喜歡的片刻，之後還會再補上。',
+    'photos.metCaption': '線上相遇',
+    'photos.metAlt': 'Kevin 與 Joyce 在沙發上一起微笑',
+    'photos.firstDateCaption': '第一次約會',
+    'photos.firstDateAlt': 'Kevin 與 Joyce 在戶外餐桌前微笑的合照',
+    'photos.officialCaption': '正式交往',
+    'photos.officialAlt': 'Kevin 與 Joyce 用煙火蛋糕慶祝',
+    'photos.kobeCaption': 'Kobe',
+    'photos.kobeAlt': '我們的黑色可卡犬 Kobe',
+    'photos.kobeFamilyCaption': '與 Kobe',
+    'photos.kobeFamilyAlt': 'Kevin、Joyce 與 Kobe 在床上的合照',
+    'photos.yesCaption': '我願意',
+    'photos.yesAlt': 'Kevin 與 Joyce 慶祝訂婚的一刻',
+    'photos.finaleCaption': '一起漫步',
+    'photos.finaleAlt': 'Kevin 與 Joyce 身著婚禮服裝一同漫步',
+    'photos.splashCaption': '喜歡的一張',
+    'photos.splashAlt': 'Kevin 與 Joyce 身著婚禮服裝一起微笑',
     'faq.metaTitle': '常見問題',
     'faq.metaDescription':
       '關於 Kevin 與 Joyce 2027 年 1 月 2 日台北婚禮宴客的常見問題。',
@@ -454,6 +482,8 @@ export const ui = {
     'faq.q5': '可以帶一位同行賓客嗎？',
     'faq.a5':
       '請依邀請卡上的說明為準。若不確定，可在回函留言中註明，我們會再與您確認。',
+    'faq.q6': '你們收禮嗎？',
+    'faq.a6': '我們不收禮。您願意來，就已經足夠了。',
   },
 } as const;
 

@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PhotoGallery from "../../components/PhotoGallery.astro";
+import { useTranslations } from "../../i18n/utils";
+
+const lang = "zh" as const;
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={t("photos.metaTitle")}
+  description={t("photos.metaDescription")}
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">{t("photos.eyebrow")}</p>
+      <h1>{t("photos.title")}</h1>
+      <p class="lede">{t("photos.lede")}</p>
+    </div>
+  </section>
+
+  <PhotoGallery lang={lang} />
+</BaseLayout>

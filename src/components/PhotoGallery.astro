@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import { galleryPhotos } from "../data/gallery";
+import { useTranslations, type Lang } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="section section-alt">
+  <div class="container">
+    <ul class="photo-gallery">
+      {
+        galleryPhotos.map((photo) => (
+          <li class="photo-card">
+            <figure>
+              <Image
+                src={photo.src}
+                alt={t(photo.altKey)}
+                widths={[480, 800, 1200]}
+                sizes="(min-width: 900px) 33vw, (min-width: 560px) 46vw, 92vw"
+                quality={82}
+                class="photo-card-img"
+                style={
+                  photo.objectPosition
+                    ? `object-position: ${photo.objectPosition}`
+                    : undefined
+                }
+                loading="lazy"
+              />
+              <figcaption>{t(photo.captionKey)}</figcaption>
+            </figure>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
