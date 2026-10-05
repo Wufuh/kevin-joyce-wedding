@@ -232,6 +232,20 @@ export const ui = {
     'photos.finaleAlt': 'Kevin and Joyce walking together in wedding attire',
     'photos.splashCaption': 'A favorite portrait',
     'photos.splashAlt': 'Kevin and Joyce smiling together in wedding attire',
+    'photos.gallery01Caption': 'Suited up',
+    'photos.gallery01Alt':
+      'Kevin in a navy suit, bow tie, and sunglasses, buttoning his jacket',
+    'photos.gallery02Caption': 'Peekaboo',
+    'photos.gallery02Alt': 'Joyce peeking over the tulle of her wedding dress',
+    'photos.gallery03Caption': 'All smiles',
+    'photos.gallery03Alt':
+      'Joyce smiling over her shoulder, holding the tulle of her wedding dress',
+    'photos.gallery04Caption': 'A quiet moment',
+    'photos.gallery04Alt':
+      'Kevin in a navy suit, holding his sunglasses among the trees',
+    'photos.gallery05Caption': 'Together',
+    'photos.gallery05Alt':
+      'Kevin with black and silver balloons and Joyce with red roses, both in wedding attire, by a wooden slat wall',
     'faq.metaTitle': 'FAQ',
     'faq.metaDescription':
       "Frequently asked questions about Kevin and Joyce's wedding on January 2, 2027 in Taipei.",
@@ -462,6 +476,16 @@ export const ui = {
     'photos.finaleAlt': 'Kevin 與 Joyce 身著婚禮服裝一同漫步',
     'photos.splashCaption': '喜歡的一張',
     'photos.splashAlt': 'Kevin 與 Joyce 身著婚禮服裝一起微笑',
+    'photos.gallery01Caption': '整裝待發',
+    'photos.gallery01Alt': 'Kevin 身穿深藍色西裝、打著領結並戴著墨鏡，正扣上西裝外套',
+    'photos.gallery02Caption': '躲貓貓',
+    'photos.gallery02Alt': 'Joyce 從婚紗薄紗後方探出頭來',
+    'photos.gallery03Caption': '笑容滿面',
+    'photos.gallery03Alt': 'Joyce 手捧婚紗薄紗，回眸微笑',
+    'photos.gallery04Caption': '片刻寧靜',
+    'photos.gallery04Alt': 'Kevin 身穿深藍色西裝，在樹林間手拿墨鏡',
+    'photos.gallery05Caption': '一起',
+    'photos.gallery05Alt': 'Kevin 拿著黑銀色氣球、Joyce 手捧紅玫瑰，兩人身著婚禮服裝站在木條牆前',
     'faq.metaTitle': '常見問題',
     'faq.metaDescription':
       '關於 Kevin 與 Joyce 2027 年 1 月 2 日台北婚禮宴客的常見問題。',
