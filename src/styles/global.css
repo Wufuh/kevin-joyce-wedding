@@ -926,13 +926,14 @@ html.kj-entered .splash-gate {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
+  columns: 1;
+  column-gap: 1.25rem;
 }
 
 .photo-card {
-  margin: 0;
+  margin: 0 0 1.25rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .photo-card figure {
@@ -944,10 +945,10 @@ html.kj-entered .splash-gate {
   box-shadow: var(--shadow);
 }
 
+/* Show every photo uncropped at its natural aspect ratio. */
 .photo-card-img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   display: block;
   background: var(--color-accent-soft);
 }
@@ -962,13 +963,17 @@ html.kj-entered .splash-gate {
 
 @media (min-width: 560px) {
   .photo-gallery {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.35rem;
+    columns: 2;
+    column-gap: 1.35rem;
+  }
+
+  .photo-card {
+    margin-bottom: 1.35rem;
   }
 }
 
 @media (min-width: 960px) {
   .photo-gallery {
-    grid-template-columns: 1fr 1fr 1fr;
+    columns: 3;
   }
 }

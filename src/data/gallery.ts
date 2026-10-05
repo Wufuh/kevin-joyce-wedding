@@ -19,30 +19,25 @@ export const galleryPhotos: GalleryPhoto[] = [
     src: gallery01,
     altKey: "photos.gallery01Alt",
     captionKey: "photos.gallery01Caption",
-    objectPosition: "56% center",
   },
   {
     src: gallery02,
     altKey: "photos.gallery02Alt",
     captionKey: "photos.gallery02Caption",
-    objectPosition: "center 40%",
   },
   {
     src: gallery03,
     altKey: "photos.gallery03Alt",
     captionKey: "photos.gallery03Caption",
-    objectPosition: "center 35%",
   },
   {
     src: gallery04,
     altKey: "photos.gallery04Alt",
     captionKey: "photos.gallery04Caption",
-    objectPosition: "center 30%",
   },
   {
     src: gallery05,
     altKey: "photos.gallery05Alt",
     captionKey: "photos.gallery05Caption",
-    objectPosition: "center 55%",
   },
 ];

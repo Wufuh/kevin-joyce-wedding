@@ -25,11 +25,6 @@ const t = useTranslations(lang);
                 sizes="(min-width: 900px) 33vw, (min-width: 560px) 46vw, 92vw"
                 quality={82}
                 class="photo-card-img"
-                style={
-                  photo.objectPosition
-                    ? `object-position: ${photo.objectPosition}`
-                    : undefined
-                }
                 loading="lazy"
               />
               <figcaption>{t(photo.captionKey)}</figcaption>
