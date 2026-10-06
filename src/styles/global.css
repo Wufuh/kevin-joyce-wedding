@@ -926,14 +926,14 @@ html.kj-entered .splash-gate {
   list-style: none;
   margin: 0;
   padding: 0;
-  columns: 1;
-  column-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
 }
 
 .photo-card {
-  margin: 0 0 1.25rem;
-  break-inside: avoid;
-  page-break-inside: avoid;
+  margin: 0;
 }
 
 .photo-card figure {
@@ -963,17 +963,13 @@ html.kj-entered .splash-gate {
 
 @media (min-width: 560px) {
   .photo-gallery {
-    columns: 2;
-    column-gap: 1.35rem;
-  }
-
-  .photo-card {
-    margin-bottom: 1.35rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.35rem;
   }
 }
 
 @media (min-width: 960px) {
   .photo-gallery {
-    columns: 3;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
