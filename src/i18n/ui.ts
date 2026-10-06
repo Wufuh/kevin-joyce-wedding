@@ -232,20 +232,21 @@ export const ui = {
     'photos.finaleAlt': 'Kevin and Joyce walking together in wedding attire',
     'photos.splashCaption': 'A favorite portrait',
     'photos.splashAlt': 'Kevin and Joyce smiling together in wedding attire',
-    'photos.gallery01Caption': 'Suited up',
-    'photos.gallery01Alt':
-      'Kevin in a navy suit, bow tie, and sunglasses, buttoning his jacket',
-    'photos.gallery02Caption': 'Peekaboo',
-    'photos.gallery02Alt': 'Joyce peeking over the tulle of her wedding dress',
-    'photos.gallery03Caption': 'All smiles',
-    'photos.gallery03Alt':
-      'Joyce smiling over her shoulder, holding the tulle of her wedding dress',
-    'photos.gallery04Caption': 'A quiet moment',
-    'photos.gallery04Alt':
-      'Kevin in a navy suit, holding his sunglasses among the trees',
-    'photos.gallery05Caption': 'Together',
-    'photos.gallery05Alt':
-      'Kevin with black and silver balloons and Joyce with red roses, both in wedding attire, by a wooden slat wall',
+    'photos.photo01Caption': 'The ring',
+    'photos.photo01Alt':
+      "Kevin slipping the engagement ring onto Joyce's finger",
+    'photos.photo02Caption': 'Black tie',
+    'photos.photo02Alt':
+      'Kevin in a black tuxedo and Joyce in a black strapless gown and gloves, both in sunglasses, smiling at each other in front of a white domed building',
+    'photos.photo03Caption': 'Balloons',
+    'photos.photo03Alt':
+      'Kevin in a navy three-piece suit and sunglasses, holding black and silver balloons against a wooden slat wall',
+    'photos.photo04Caption': 'Side by side',
+    'photos.photo04Alt':
+      'Kevin and Joyce walking and smiling at each other, Kevin in a navy suit with balloons and Joyce in her wedding dress',
+    'photos.photo05Caption': 'By the lake',
+    'photos.photo05Alt':
+      'Joyce in her wedding gown with a long flowing veil, holding red roses by a lake, with a white domed building and a bridge behind her',
     'faq.metaTitle': 'FAQ',
     'faq.metaDescription':
       "Frequently asked questions about Kevin and Joyce's wedding on January 2, 2027 in Taipei.",
@@ -476,16 +477,21 @@ export const ui = {
     'photos.finaleAlt': 'Kevin 與 Joyce 身著婚禮服裝一同漫步',
     'photos.splashCaption': '喜歡的一張',
     'photos.splashAlt': 'Kevin 與 Joyce 身著婚禮服裝一起微笑',
-    'photos.gallery01Caption': '整裝待發',
-    'photos.gallery01Alt': 'Kevin 身穿深藍色西裝、打著領結並戴著墨鏡，正扣上西裝外套',
-    'photos.gallery02Caption': '躲貓貓',
-    'photos.gallery02Alt': 'Joyce 從婚紗薄紗後方探出頭來',
-    'photos.gallery03Caption': '笑容滿面',
-    'photos.gallery03Alt': 'Joyce 手捧婚紗薄紗，回眸微笑',
-    'photos.gallery04Caption': '片刻寧靜',
-    'photos.gallery04Alt': 'Kevin 身穿深藍色西裝，在樹林間手拿墨鏡',
-    'photos.gallery05Caption': '一起',
-    'photos.gallery05Alt': 'Kevin 拿著黑銀色氣球、Joyce 手捧紅玫瑰，兩人身著婚禮服裝站在木條牆前',
+    'photos.photo01Caption': '戒指',
+    'photos.photo01Alt':
+      'Kevin 為 Joyce 戴上訂婚戒指的特寫',
+    'photos.photo02Caption': '黑色禮服',
+    'photos.photo02Alt':
+      'Kevin 身穿黑色禮服西裝、Joyce 身著黑色平口禮服與手套，兩人戴著墨鏡，在白色圓頂建築前相視而笑',
+    'photos.photo03Caption': '氣球',
+    'photos.photo03Alt':
+      'Kevin 身穿深藍色三件式西裝、戴著墨鏡，在木條牆前拿著黑銀色氣球',
+    'photos.photo04Caption': '並肩同行',
+    'photos.photo04Alt':
+      'Kevin 與 Joyce 並肩漫步、相視而笑，Kevin 身穿深藍色西裝拿著氣球，Joyce 身著婚紗',
+    'photos.photo05Caption': '湖畔',
+    'photos.photo05Alt':
+      'Joyce 身著婚紗、披著飄逸長頭紗，手捧紅玫瑰站在湖畔，身後是白色圓頂建築與橋',
     'faq.metaTitle': '常見問題',
     'faq.metaDescription':
       '關於 Kevin 與 Joyce 2027 年 1 月 2 日台北婚禮宴客的常見問題。',

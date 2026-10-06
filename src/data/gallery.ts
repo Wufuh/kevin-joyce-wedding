@@ -1,43 +1,25 @@
 import type { UiKey } from "../i18n/utils";
-import gallery01 from "../assets/gallery-01.jpg";
-import gallery02 from "../assets/gallery-02.jpg";
-import gallery03 from "../assets/gallery-03.jpg";
-import gallery04 from "../assets/gallery-04.jpg";
-import gallery05 from "../assets/gallery-05.jpg";
+import photo01 from "../assets/photo-01.jpg";
+import photo02 from "../assets/photo-02.jpg";
+import photo03 from "../assets/photo-03.jpg";
+import photo04 from "../assets/photo-04.jpg";
+import photo05 from "../assets/photo-05.jpg";
 
-/** Add a photo by appending one entry. Copy and alt live with the image. */
+/**
+ * Add a photo by importing it above and appending one entry below.
+ * Caption and alt keys live in src/i18n/ui.ts (photos.photoNNCaption / photos.photoNNAlt).
+ * Images render uncropped at their natural aspect ratio.
+ */
 export type GalleryPhoto = {
   src: ImageMetadata;
   altKey: UiKey;
   captionKey: UiKey;
-  /** CSS object-position so faces stay in the crop. */
-  objectPosition?: string;
 };
 
 export const galleryPhotos: GalleryPhoto[] = [
-  {
-    src: gallery01,
-    altKey: "photos.gallery01Alt",
-    captionKey: "photos.gallery01Caption",
-  },
-  {
-    src: gallery02,
-    altKey: "photos.gallery02Alt",
-    captionKey: "photos.gallery02Caption",
-  },
-  {
-    src: gallery03,
-    altKey: "photos.gallery03Alt",
-    captionKey: "photos.gallery03Caption",
-  },
-  {
-    src: gallery04,
-    altKey: "photos.gallery04Alt",
-    captionKey: "photos.gallery04Caption",
-  },
-  {
-    src: gallery05,
-    altKey: "photos.gallery05Alt",
-    captionKey: "photos.gallery05Caption",
-  },
+  { src: photo01, altKey: "photos.photo01Alt", captionKey: "photos.photo01Caption" },
+  { src: photo02, altKey: "photos.photo02Alt", captionKey: "photos.photo02Caption" },
+  { src: photo03, altKey: "photos.photo03Alt", captionKey: "photos.photo03Caption" },
+  { src: photo04, altKey: "photos.photo04Alt", captionKey: "photos.photo04Caption" },
+  { src: photo05, altKey: "photos.photo05Alt", captionKey: "photos.photo05Caption" },
 ];
