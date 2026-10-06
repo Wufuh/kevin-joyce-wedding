@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { galleryPhotos } from "../data/gallery";
+import { galleryPhotos, showCaptions } from "../data/gallery";
 import { useTranslations, type Lang } from "../i18n/utils";
 
 interface Props {
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
                 class="photo-card-img"
                 loading="lazy"
               />
-              <figcaption>{t(photo.captionKey)}</figcaption>
+              {showCaptions && <figcaption>{t(photo.captionKey)}</figcaption>}
             </figure>
           </li>
         ))

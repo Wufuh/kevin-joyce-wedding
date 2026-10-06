@@ -20,6 +20,9 @@ export type GalleryPhoto = {
   captionKey: UiKey;
 };
 
+/** Set to true to show the caption under each photo again. Alt text always renders. */
+export const showCaptions = false;
+
 export const galleryPhotos: GalleryPhoto[] = [
   { src: photo01, altKey: "photos.photo01Alt", captionKey: "photos.photo01Caption" },
   { src: photo02, altKey: "photos.photo02Alt", captionKey: "photos.photo02Caption" },
