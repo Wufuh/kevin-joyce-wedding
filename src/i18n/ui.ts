@@ -9,7 +9,6 @@ export const defaultLang: Lang = 'en';
 
 export const routes = [
   '',
-  'our-story',
   'photos',
   'details',
   'travel',
@@ -29,7 +28,6 @@ export const ui = {
     'a11y.primaryNav': 'Primary',
     'a11y.langSwitch': 'Language',
     'nav.home': 'Home',
-    'nav.ourStory': 'Our Story',
     'nav.photos': 'Photos',
     'nav.details': 'Details',
     'nav.travel': 'Travel & Stay',
@@ -52,11 +50,11 @@ export const ui = {
     'splash.date': 'January 2, 2027',
     'splash.enter': 'Enter',
     'splash.alt': 'Kevin and Joyce',
-    'home.storyEyebrow': 'Our story',
-    'home.storyTitle': 'How we got here',
-    'home.storyBody':
-      'From matching online to a Tokyo yes — and welcoming Kobe along the way. Next stop: Taipei, January 2, 2027.',
-    'home.storyLink': 'Read our story',
+    'home.photosEyebrow': 'Gallery',
+    'home.photosTitle': 'A few favorite moments',
+    'home.photosBody':
+      'A handful of portraits from our engagement and wedding shoots. More photos to come.',
+    'home.photosLink': 'See our photos',
     'home.travelEyebrow': 'Visiting Taipei',
     'home.travelTitle': 'Travel & stay',
     'home.travelBody':
@@ -169,69 +167,12 @@ export const ui = {
     'rsvp.notConfiguredTitle': 'Form not configured yet',
     'rsvp.notConfiguredBody':
       'Set PUBLIC_FORMSPREE_ID in your environment (see README) to enable the on-site RSVP form. Create a free form at formspree.io, then restart the dev server or rebuild.',
-    'story.metaTitle': 'Our Story',
-    'story.metaDescription':
-      'The story of Kevin and Joyce — from matching online to saying yes in Tokyo, and celebrating in Taipei on January 2, 2027.',
-    'story.eyebrow': 'Our story',
-    'story.title': 'How we found each other',
-    'story.lede':
-      'A few favorite chapters from our journey — told as a little comic strip.',
-    'story.photoSoon': 'Photo coming soon',
-    'story.kobeAlt': 'Kobe, our black cocker spaniel',
-    'story.kobeFamilyAlt':
-      'Kevin and Joyce with Kobe on the bed',
-    'story.proposalAlt':
-      'Kevin and Joyce celebrating their engagement',
-    'story.panel1Alt':
-      'Kevin and Joyce smiling together on a couch',
-    'story.panel2Alt':
-      'Kevin and Joyce smiling together on their first date at an outdoor dinner table',
-    'story.panel3Alt':
-      'Kevin and Joyce celebrating with a sparkler cake',
-    'story.panel4Alt':
-      'Illustrated anime-style scene of the Tokyo proposal',
-    'story.panel6Alt':
-      'Kevin and Joyce walking together in wedding attire',
-    'story.panel1Title': 'Met online',
-    'story.panel1Caption':
-      "We matched online and talked like we'd known each other forever.",
-    'story.panel2Title': 'First date',
-    'story.panel2Caption':
-      'A Japanese dinner that turned into instant chemistry.',
-    'story.panel3Title': 'Official',
-    'story.panel3Caption':
-      'A few months (and many dates) later, we made it official.',
-    'story.panel4Title': 'Tokyo proposal',
-    'story.panel4Caption': 'He proposed in Tokyo — yes forever.',
-    'story.panel5Title': 'Kobe',
-    'story.panel5Caption':
-      'A year in, we got Kobe, our adorable cocker spaniel.',
-    'story.panel6Title': 'Next chapter',
-    'story.panel6Caption':
-      'Next stop: celebrating with you in Taipei, January 2, 2027.',
     'photos.metaTitle': 'Photos',
     'photos.metaDescription':
       'A small gallery of favorite moments from Kevin and Joyce.',
     'photos.eyebrow': 'Gallery',
     'photos.title': 'Photos',
     'photos.lede': 'A few favorite moments. More photos to come.',
-    'photos.metCaption': 'Met online',
-    'photos.metAlt': 'Kevin and Joyce smiling together on a couch',
-    'photos.firstDateCaption': 'First date',
-    'photos.firstDateAlt':
-      'Kevin and Joyce smiling together at an outdoor dinner table',
-    'photos.officialCaption': 'Official',
-    'photos.officialAlt': 'Kevin and Joyce celebrating with a sparkler cake',
-    'photos.kobeCaption': 'Kobe',
-    'photos.kobeAlt': 'Kobe, our black cocker spaniel',
-    'photos.kobeFamilyCaption': 'With Kobe',
-    'photos.kobeFamilyAlt': 'Kevin and Joyce with Kobe on the bed',
-    'photos.yesCaption': 'Yes',
-    'photos.yesAlt': 'Kevin and Joyce celebrating their engagement',
-    'photos.finaleCaption': 'Walking together',
-    'photos.finaleAlt': 'Kevin and Joyce walking together in wedding attire',
-    'photos.splashCaption': 'A favorite portrait',
-    'photos.splashAlt': 'Kevin and Joyce smiling together in wedding attire',
     'photos.photo01Caption': 'The ring',
     'photos.photo01Alt':
       "Kevin slipping the engagement ring onto Joyce's finger",
@@ -290,7 +231,6 @@ export const ui = {
     'a11y.primaryNav': '主要導覽',
     'a11y.langSwitch': '語言',
     'nav.home': '首頁',
-    'nav.ourStory': '我們的故事',
     'nav.photos': '相片',
     'nav.details': '婚禮資訊',
     'nav.travel': '交通與住宿',
@@ -313,11 +253,10 @@ export const ui = {
     'splash.date': '2027 年 1 月 2 日',
     'splash.enter': '進入',
     'splash.alt': 'Kevin 與 Joyce',
-    'home.storyEyebrow': '我們的故事',
-    'home.storyTitle': '一路走到這裡',
-    'home.storyBody':
-      '從線上相遇、東京的「我願意」，到迎來 Kobe。下一站：2027 年 1 月 2 日，台北見。',
-    'home.storyLink': '閱讀我們的故事',
+    'home.photosEyebrow': '影像',
+    'home.photosTitle': '一些我們喜歡的片刻',
+    'home.photosBody': '幾張訂婚與婚紗拍攝的照片，之後還會再補上。',
+    'home.photosLink': '看看我們的相片',
     'home.travelEyebrow': '造訪台北',
     'home.travelTitle': '交通與住宿',
     'home.travelBody':
@@ -427,65 +366,11 @@ export const ui = {
     'rsvp.notConfiguredTitle': '表單尚未設定',
     'rsvp.notConfiguredBody':
       '請在環境變數中設定 PUBLIC_FORMSPREE_ID（詳見 README）以啟用回函表單。可至 formspree.io 免費建立表單，再重新啟動開發伺服器或重新建置。',
-    'story.metaTitle': '我們的故事',
-    'story.metaDescription':
-      'Kevin 與 Joyce 的故事——從線上相遇、東京求婚，到 2027 年 1 月 2 日在台北慶祝。',
-    'story.eyebrow': '我們的故事',
-    'story.title': '我們如何相遇',
-    'story.lede': '幾個我們最愛的篇章——用溫暖的漫畫格說給你們聽。',
-    'story.photoSoon': '照片即將補上',
-    'story.kobeAlt': '我們的黑色可卡犬 Kobe',
-    'story.kobeFamilyAlt':
-      'Kevin、Joyce 與 Kobe 在床上的合照',
-    'story.proposalAlt':
-      'Kevin 與 Joyce 慶祝訂婚的一刻',
-    'story.panel1Alt':
-      'Kevin 與 Joyce 在沙發上一起微笑的自拍',
-    'story.panel2Alt':
-      'Kevin 與 Joyce 第一次約會時在戶外餐桌前微笑的合照',
-    'story.panel3Alt':
-      'Kevin 與 Joyce 用煙火蛋糕慶祝',
-    'story.panel4Alt':
-      '動漫風格插畫：東京求婚場景',
-    'story.panel6Alt':
-      'Kevin 與 Joyce 身著婚禮服裝一同漫步',
-    'story.panel1Title': '線上相遇',
-    'story.panel1Caption':
-      '我們在線上配對，聊起天來像認識了很久一樣。',
-    'story.panel2Title': '第一次約會',
-    'story.panel2Caption': '一頓日式晚餐，當場就擦出火花。',
-    'story.panel3Title': '正式交往',
-    'story.panel3Caption':
-      '幾個月（還有無數次約會）之後，我們正式在一起了。',
-    'story.panel4Title': '東京求婚',
-    'story.panel4Caption': '他在東京求婚——永遠的「我願意」。',
-    'story.panel5Title': 'Kobe',
-    'story.panel5Caption':
-      '交往滿一年，我們迎來了可愛的可卡犬 Kobe。',
-    'story.panel6Title': '下一章',
-    'story.panel6Caption':
-      '下一站：2027 年 1 月 2 日，在台北與你們一同慶祝。',
     'photos.metaTitle': '相片',
     'photos.metaDescription': 'Kevin 與 Joyce 喜歡的一些片刻。',
     'photos.eyebrow': '影像',
     'photos.title': '相片',
     'photos.lede': '一些我們喜歡的片刻，之後還會再補上。',
-    'photos.metCaption': '線上相遇',
-    'photos.metAlt': 'Kevin 與 Joyce 在沙發上一起微笑',
-    'photos.firstDateCaption': '第一次約會',
-    'photos.firstDateAlt': 'Kevin 與 Joyce 在戶外餐桌前微笑的合照',
-    'photos.officialCaption': '正式交往',
-    'photos.officialAlt': 'Kevin 與 Joyce 用煙火蛋糕慶祝',
-    'photos.kobeCaption': 'Kobe',
-    'photos.kobeAlt': '我們的黑色可卡犬 Kobe',
-    'photos.kobeFamilyCaption': '與 Kobe',
-    'photos.kobeFamilyAlt': 'Kevin、Joyce 與 Kobe 在床上的合照',
-    'photos.yesCaption': '我願意',
-    'photos.yesAlt': 'Kevin 與 Joyce 慶祝訂婚的一刻',
-    'photos.finaleCaption': '一起漫步',
-    'photos.finaleAlt': 'Kevin 與 Joyce 身著婚禮服裝一同漫步',
-    'photos.splashCaption': '喜歡的一張',
-    'photos.splashAlt': 'Kevin 與 Joyce 身著婚禮服裝一起微笑',
     'photos.photo01Caption': '戒指',
     'photos.photo01Alt':
       'Kevin 為 Joyce 戴上訂婚戒指的特寫',

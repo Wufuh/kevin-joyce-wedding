@@ -6,7 +6,7 @@ import photo04 from "../assets/photo-04.jpg";
 import photo05 from "../assets/photo-05.jpg";
 import photo06 from "../assets/photo-06.jpg";
 import photo07 from "../assets/photo-07.jpg";
-// Shared with Our Story; keep the file.
+// Wedding walk photo.
 import finale from "../assets/finale.jpg";
 
 /**
