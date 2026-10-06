@@ -247,6 +247,15 @@ export const ui = {
     'photos.photo05Caption': 'By the lake',
     'photos.photo05Alt':
       'Joyce in her wedding gown with a long flowing veil, holding red roses by a lake, with a white domed building and a bridge behind her',
+    'photos.photo06Caption': 'Hand in hand',
+    'photos.photo06Alt':
+      'Kevin and Joyce leaning on a wooden table, chins in their hands, holding hands and smiling at each other',
+    'photos.photo07Caption': 'Roses and blue skies',
+    'photos.photo07Alt':
+      'Kevin in a black tuxedo and Joyce in a lace wedding gown with red roses, holding hands as they walk, with white statues and a domed building behind them',
+    'photos.photo08Caption': 'Walking together',
+    'photos.photo08Alt':
+      'Kevin and Joyce walking together in wedding attire',
     'faq.metaTitle': 'FAQ',
     'faq.metaDescription':
       "Frequently asked questions about Kevin and Joyce's wedding on January 2, 2027 in Taipei.",
@@ -492,6 +501,15 @@ export const ui = {
     'photos.photo05Caption': '湖畔',
     'photos.photo05Alt':
       'Joyce 身著婚紗、披著飄逸長頭紗，手捧紅玫瑰站在湖畔，身後是白色圓頂建築與橋',
+    'photos.photo06Caption': '手牽手',
+    'photos.photo06Alt':
+      'Kevin 與 Joyce 倚在木桌上托著下巴，手牽著手相視而笑',
+    'photos.photo07Caption': '玫瑰與藍天',
+    'photos.photo07Alt':
+      'Kevin 身穿黑色禮服西裝、Joyce 身著蕾絲婚紗手捧紅玫瑰，兩人牽手漫步，身後是白色雕像與圓頂建築',
+    'photos.photo08Caption': '一起漫步',
+    'photos.photo08Alt':
+      'Kevin 與 Joyce 身著婚禮服裝一同漫步',
     'faq.metaTitle': '常見問題',
     'faq.metaDescription':
       '關於 Kevin 與 Joyce 2027 年 1 月 2 日台北婚禮宴客的常見問題。',
